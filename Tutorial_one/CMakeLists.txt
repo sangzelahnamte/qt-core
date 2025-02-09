@@ -15,6 +15,7 @@ find_package(Qt${QT_VERSION_MAJOR} REQUIRED COMPONENTS Core)
 add_executable(Tutorial_one
   main.cpp
   shape.h shape.cpp
+  four_wheel.h four_wheel.cpp
 )
 target_link_libraries(Tutorial_one Qt${QT_VERSION_MAJOR}::Core)
 

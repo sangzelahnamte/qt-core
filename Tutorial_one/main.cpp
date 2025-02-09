@@ -1,5 +1,6 @@
 #include <QCoreApplication>
 #include "shape.h"
+#include "four_wheel.h"
 
 void create_objects()
 {
@@ -10,6 +11,10 @@ void create_objects()
 
     Shape myTriangle(nullptr, "Triangle"); // created another object
     myTriangle.print_info("This is a triangle");
+
+    Four_Wheel toyota_cruiser;
+    toyota_cruiser.setObjectName("Toyota Tiger");
+    qInfo() << "Has wheels: " << toyota_cruiser.hasFourWheel();
 }
 
 int main(int argc, char *argv[])
