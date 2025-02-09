@@ -16,6 +16,7 @@ add_executable(Tutorial_one
   main.cpp
   shape.h shape.cpp
   four_wheel.h four_wheel.cpp
+  truck.h truck.cpp
 )
 target_link_libraries(Tutorial_one Qt${QT_VERSION_MAJOR}::Core)
 

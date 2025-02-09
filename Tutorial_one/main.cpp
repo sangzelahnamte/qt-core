@@ -1,6 +1,7 @@
 #include <QCoreApplication>
 #include "shape.h"
 #include "four_wheel.h"
+#include "truck.h"
 
 void create_objects()
 {
@@ -15,6 +16,10 @@ void create_objects()
     Four_Wheel toyota_cruiser;
     toyota_cruiser.setObjectName("Toyota Tiger");
     qInfo() << "Has wheels: " << toyota_cruiser.hasFourWheel();
+
+    Truck ashok;
+    ashok.setObjectName("Ashok Layland");
+    ashok.print_info("This is a nice truck");
 }
 
 int main(int argc, char *argv[])
