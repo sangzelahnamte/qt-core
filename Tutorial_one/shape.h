@@ -9,6 +9,7 @@ class Shape : public QObject
     Q_OBJECT
 public:
     explicit Shape(QObject *parent = nullptr);
+    ~Shape();
     void print_info(QString msg);
 
 signals:
