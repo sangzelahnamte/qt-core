@@ -22,6 +22,8 @@ int main(int argc, char *argv[])
     delete num_var;
     num_var = nullptr;
 
+    qInfo() << "Changes in the source code made HERE!!!!";
+
     qDebug() << "Program executed successfully";
 
     return a.exec();
