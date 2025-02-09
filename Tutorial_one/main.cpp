@@ -7,15 +7,18 @@ void create_objects()
     myShape.print_info("is the first shape");
     myShape.m_number = 45;
     myShape.print_number();
+
+    Shape myTriangle(nullptr, "Triangle"); // created another object
+    myTriangle.print_info("This is a triangle");
 }
 
 int main(int argc, char *argv[])
 {
     QCoreApplication a(argc, argv);
 
-    create_objects();
+    create_objects(); // a method for creating an instances of a class
 
     qDebug() << "Program executed successfully";
-
+    // check for contructor and deconstructor on the console
     return a.exec();
 }
