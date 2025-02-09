@@ -13,5 +13,16 @@ int main(int argc, char *argv[])
     std::cin >> name_var;
     qInfo() << "Name: " << name_var;
 
+    int number = 0;
+    int* num_var = new int(); // on the heap
+    std::cout << "Enter number: ";
+    std::cin >> *num_var;
+
+    std::cout << "Your number: " << *num_var << std::endl;
+    delete num_var;
+    num_var = nullptr;
+
+    qDebug() << "Program executed successfully";
+
     return a.exec();
 }
