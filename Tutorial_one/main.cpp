@@ -3,8 +3,13 @@
 #include "four_wheel.h"
 #include "truck.h"
 
+// needs to be defined here will work only for instance of class
+int Four_Wheel::count = 0; // static class member variable declaration on global scope
+
 void create_objects()
 {
+    qInfo() << "Object count: " << Four_Wheel::count;
+
     Shape myShape(nullptr, "Blue rectangle");
     myShape.print_info("is the first shape");
     myShape.m_number = 45;
@@ -20,6 +25,8 @@ void create_objects()
     Truck ashok;
     ashok.setObjectName("Ashok Layland");
     ashok.print_info("This is a nice truck");
+
+    qInfo() << "Object count: " << Four_Wheel::count;
 }
 
 int main(int argc, char *argv[])

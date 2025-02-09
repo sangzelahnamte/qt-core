@@ -11,6 +11,7 @@ public:
     explicit Four_Wheel(QObject *parent = nullptr);
     ~Four_Wheel();
     bool hasFourWheel();
+    static int count;
 signals:
 };
 
