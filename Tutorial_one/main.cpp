@@ -5,6 +5,7 @@
 #include <QIODevice>
 #include <QBuffer>
 #include <QDebug>
+#include <QFile>
 
 // needs to be defined here will work only for instance of class
 int Four_Wheel::count = 0; // static class member variable declaration on global scope
@@ -31,24 +32,26 @@ void create_objects()
 
     qInfo() << "Object count: " << Four_Wheel::count;
 
-    QBuffer buffer;
-    if(buffer.open(QIODevice::ReadWrite))
+    QString my_file_name = "test.txt";
+    QFile my_file(my_file_name);
+    // buffer kan mamawh tawh lo
+    if(my_file.open(QIODevice::ReadWrite))               // Data ziah luh na leh chhiar na (READ AND WRITE)
     {
         qInfo() << "File buffer opened";
         QByteArray byte_data = "a piece of data";
         for (int i = 0; i < 10; ++i)
         {
-            buffer.write(byte_data);
-            buffer.write("\r\n");
+            my_file.write(byte_data);
+            my_file.write("\r\n");
         }
-        buffer.seek(0);
-        qInfo() << buffer.readAll();
-        buffer.close();
+        my_file.seek(0);
+        qInfo() << my_file.readAll();
+        my_file.close();
         qInfo() << "Data reading completed";
     }
     else
     {
-        qInfo() << "Cannot read file";
+        qInfo() << my_file.errorString(); // ERROR a rawn ti lang ang
     }
 }
 
