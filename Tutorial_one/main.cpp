@@ -6,6 +6,7 @@
 #include <QBuffer>
 #include <QDebug>
 #include <QFile>
+#include <QTextStream>
 
 // needs to be defined here will work only for instance of class
 int Four_Wheel::count = 0; // static class member variable declaration on global scope
@@ -31,32 +32,55 @@ void create_objects()
     ashok.print_info("This is a nice truck");
 
     qInfo() << "Object count: " << Four_Wheel::count;
+}
 
+void read_file(QFile &your_file) // file read na
+{
+    if(!your_file.isReadable())
+    {
+        qInfo() << your_file.errorString();
+    }
+    QTextStream text_streams(&your_file);
+    text_streams.seek(0);
+    while(!text_streams.atEnd())
+    {
+        qInfo() << text_streams.readLine();
+    }
+}
 
+void write_file(QFile &your_file)
+{
+    if(!your_file.isWritable())
+    {
+        qInfo() << your_file.errorString();
+    }
+    QTextStream text_streams(&your_file);
+    text_streams.seek(your_file.size()); // a tawp atanga kan append dawn vangin size dah
+    for(int i = 0; i < 10; i++)
+    {
+        text_streams << " Appending new text data to file\n";
+    }
+    text_streams.flush();
+    qInfo() << "File data written";
 }
 
 int main(int argc, char *argv[])
 {
     QCoreApplication a(argc, argv);
 
-    create_objects(); // a method for creating an instances of a class
+    //create_objects(); // a method for creating an instances of a class
 
     QString my_file_name = "test.txt";
     QFile my_file(my_file_name);
     // buffer kan mamawh tawh lo
     if(my_file.open(QIODevice::ReadWrite))               // Data ziah luh na leh chhiar na (READ AND WRITE)
     {
-        qInfo() << "File buffer opened";
-        QByteArray byte_data = "a piece of data";
-        for (int i = 0; i < 10; ++i)
-        {
-            my_file.write(byte_data);
-            my_file.write("\r\n");
-        }
-        my_file.seek(0);
-        qInfo() << my_file.readAll();
+        qInfo() << "File opened";
+        read_file(my_file); // reading txt file from current build directory
+        write_file(my_file); // writing to txt file
+        read_file(my_file); // reading again
         my_file.close();
-        qInfo() << "Data reading completed";
+        qInfo() << "File closed";
     }
     else
     {
