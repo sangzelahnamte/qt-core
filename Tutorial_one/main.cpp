@@ -32,6 +32,15 @@ void create_objects()
 
     qInfo() << "Object count: " << Four_Wheel::count;
 
+
+}
+
+int main(int argc, char *argv[])
+{
+    QCoreApplication a(argc, argv);
+
+    create_objects(); // a method for creating an instances of a class
+
     QString my_file_name = "test.txt";
     QFile my_file(my_file_name);
     // buffer kan mamawh tawh lo
@@ -53,13 +62,6 @@ void create_objects()
     {
         qInfo() << my_file.errorString(); // ERROR a rawn ti lang ang
     }
-}
-
-int main(int argc, char *argv[])
-{
-    QCoreApplication a(argc, argv);
-
-    create_objects(); // a method for creating an instances of a class
 
     qDebug() << "Program executed successfully";
     // check for contructor and deconstructor on the console
