@@ -1,9 +1,0 @@
-G:/QT lesson/Core/Tutorials/qt-core/Container_qt/build/Desktop_Qt_6_7_0_MinGW_64_bit-Debug/CMakeFiles/Container_qt.dir
-G:/QT lesson/Core/Tutorials/qt-core/Container_qt/build/Desktop_Qt_6_7_0_MinGW_64_bit-Debug/CMakeFiles/edit_cache.dir
-G:/QT lesson/Core/Tutorials/qt-core/Container_qt/build/Desktop_Qt_6_7_0_MinGW_64_bit-Debug/CMakeFiles/rebuild_cache.dir
-G:/QT lesson/Core/Tutorials/qt-core/Container_qt/build/Desktop_Qt_6_7_0_MinGW_64_bit-Debug/CMakeFiles/list_install_components.dir
-G:/QT lesson/Core/Tutorials/qt-core/Container_qt/build/Desktop_Qt_6_7_0_MinGW_64_bit-Debug/CMakeFiles/install.dir
-G:/QT lesson/Core/Tutorials/qt-core/Container_qt/build/Desktop_Qt_6_7_0_MinGW_64_bit-Debug/CMakeFiles/install/local.dir
-G:/QT lesson/Core/Tutorials/qt-core/Container_qt/build/Desktop_Qt_6_7_0_MinGW_64_bit-Debug/CMakeFiles/install/strip.dir
-G:/QT lesson/Core/Tutorials/qt-core/Container_qt/build/Desktop_Qt_6_7_0_MinGW_64_bit-Debug/CMakeFiles/Container_qt_autogen_timestamp_deps.dir
-G:/QT lesson/Core/Tutorials/qt-core/Container_qt/build/Desktop_Qt_6_7_0_MinGW_64_bit-Debug/CMakeFiles/Container_qt_autogen.dir
